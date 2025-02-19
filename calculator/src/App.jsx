@@ -26,6 +26,14 @@ function App() {
 
   function divide(e) {
     e.preventDefault();
+    if (
+      inputRef.current.value === 0 ||
+      inputRef.current.value === "" ||
+      inputRef.current.value.isNan
+    ) {
+      alert("Cannot be divided by 0 or NaN");
+      return;
+    }
     setResult((result) => result / Number(inputRef.current.value));
 
     // Add the code for the divide function
