@@ -26,11 +26,7 @@ function App() {
 
   function divide(e) {
     e.preventDefault();
-    if (
-      inputRef.current.value === 0 ||
-      inputRef.current.value === "" ||
-      inputRef.current.value.isNan
-    ) {
+    if (inputRef.current.value == 0 || inputRef.current.value === "") {
       alert("Cannot be divided by 0 or NaN");
       return;
     }
@@ -41,7 +37,7 @@ function App() {
 
   function resetInput(e) {
     e.preventDefault();
-    inputRef.current.value = "";
+    inputRef.current.value = 0;
     inputRef.current.focus();
 
     // Add the code for the resetInput function
